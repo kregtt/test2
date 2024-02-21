@@ -4,7 +4,6 @@ FROM gitlab-registry.insee.fr:443/datascience/registry-prod/onyxia-r-datascience
 # Installation des packages R necessaires à l'application
 RUN Rscript -e "install.packages(c('shiny','shinyjs','aws.s3','lubridate','dplyr','stringi','stringr','tableHTML','tidyr','writexl','rmarkdown','grid','gridExtra','openxlsx','knitr','png'))"
 
-
 # Copie des fichiers de l'app Shiny
 RUN mkdir ~/ShinyApp
 WORKDIR ~/ShinyApp
